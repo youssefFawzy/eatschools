@@ -46,8 +46,10 @@ function activateScript() {
     </li>
   `;
 
-  navbarList.insertAdjacentHTML("beforeend", login1st2ndSec);
-  navbarList.insertAdjacentHTML("beforeend", login3rdSec);
+  if (window.innerWidth <= 768) {
+    navbarList.insertAdjacentHTML("beforeend", login1st2ndSec);
+    navbarList.insertAdjacentHTML("beforeend", login3rdSec);
+  }
 }
 
 activateScript();
