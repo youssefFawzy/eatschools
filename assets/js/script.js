@@ -24,7 +24,7 @@ for (let i = 0; i < elemArr.length; i++) {
  * toggle navbar & overlay when click any navbar-link
  */
 
-const navbarLinks = document.querySelectorAll("[data-navbar-link]");
+const navbarLinks = document.querySelectorAll("[data-navbar] a");
 
 for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", function () {
