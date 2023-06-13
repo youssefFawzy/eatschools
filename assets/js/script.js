@@ -46,7 +46,7 @@ function activateScript() {
     </li>
   `;
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 549) {
     navbarList.insertAdjacentHTML("beforeend", login1st2ndSec);
     navbarList.insertAdjacentHTML("beforeend", login3rdSec);
   }
@@ -67,7 +67,7 @@ const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY >= 400) {
+  if (window.scrollY >= 500) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
   } else {
