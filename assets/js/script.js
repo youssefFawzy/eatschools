@@ -10,6 +10,7 @@ const navOpenBtn = document.querySelector("[data-nav-open-btn]");
 const navbar = document.querySelector("[data-navbar]");
 const navCloseBtn = document.querySelector("[data-nav-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
+const navbarList = document.querySelector(".navbar-list");
 
 const elemArr = [navCloseBtn, overlay, navOpenBtn];
 
@@ -23,8 +24,7 @@ for (let i = 0; i < elemArr.length; i++) {
 /**
  * toggle navbar & overlay when click any navbar-link
  */
-
-const navbarLinks = document.querySelectorAll("[data-navbar] .navbar-link");
+const navbarLinks = document.querySelectorAll("[data-navbar-link]");
 
 for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", function () {
@@ -32,6 +32,25 @@ for (let i = 0; i < navbarLinks.length; i++) {
     overlay.classList.toggle("active");
   });
 }
+
+function activateScript() {
+  const login1st2ndSec = `
+    <li class="navbar-item">
+      <a href="https://eatschools.com/online/login/index.php" class="navbar-link" data-navbar-link>Login (1st & 2nd Sec)</a>
+    </li>
+  `;
+
+  const login3rdSec = `
+    <li class="navbar-item">
+      <a href="https://eatschools.com/eat/login/index.php" class="navbar-link" data-navbar-link>Login (3rd Sec)</a>
+    </li>
+  `;
+
+  navbarList.insertAdjacentHTML("beforeend", login1st2ndSec);
+  navbarList.insertAdjacentHTML("beforeend", login3rdSec);
+}
+
+activateScript();
 
 
 
